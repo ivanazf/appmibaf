@@ -1,41 +1,52 @@
 import { useState } from 'react';
-
-const Counter = () => {
+                 //,useEffect
+const Counter = ({ stock, onAdd }) => {
     const [count, setCount] = useState(0)
-    const [text, setText] = useState('Text')
     
-    //let count = 0 
+    //const [title, setTitle] = useState('Hola, gente linda!')
+
+    //primer caso: se renderiza y se monta un componente
+    //useEffect (() => {
+    //    console.log('el componente se montó')
+    //
+    //   return () => console.log('se va a desmontar el componente')
+    //}, [])
+
+    //segundo caso: el componente se renderiza, se monta y se actualiza el titulo
+    /*useEffect (() => {
+      console.log('Cambió el title')
+
+      return () => console.log('Antes de cambiar title')
+    },[title])*/
 
     const increment = () => {
-        //count ++
-        setCount(count + 1)
+        if(count < stock) {
+            setCount(count + 1)
+        }
     }
 
     const decrement = () => {
-        setCount(count - 1)
+        if(count > 1) {
+            setCount(count - 1)
+        }
     }
+        //console.log('render')
     return (
-        <div>    
-            <h1>{text}</h1>        
+        <div>
+            {/*<h1>{title}</h1>*/}
+            {/*<button onClick={() => setTitle(title === 'Hola' ? 'Chau' : 'Hola')}>Saludar</button>*/}
             <h1>{count}</h1>
                 <button onClick={decrement}>Decrementar</button>
                 <button onClick={increment}>Incrementar</button>
+                <button onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
         
     )
 }
 
 export default Counter;
-    /*cons [Counter,setCounter] = OurReact.useState(10)
-    const [title, setTitle] = useState
+    
+    
 
 
-    const increment = () => setCounter(counter +1)
-
-    return (
-        <div>
-            <h1>{count}</h1>
-            <button onClick=></button>
-        </div>
-    )*/
 

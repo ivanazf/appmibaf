@@ -1,16 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const Button = ({handleClick, children}) => {
+const Button = ({children}) => {
+        //const {handleClick, children} = props
+    const handleClick = () => {
+        console.log('hola')
+    }
     
-    //const {handleClick, children} = props
-
+    useEffect(() => {
+        const button = document.getElementById('button')
+        
+        button.addEventListener('click', handleClick)
+        
+        return () => {
+            button.removeEventListener('click', handleClick)
+        };
+    }, []);
+    
     return (
-    <button onClick={handleClick}>
+    <button id='button' onClick={handleClick}> 
         {children}
     </button>
     )
-    //Esto va en la prop onClick={props.handleClick}
-   // document.getElementById('button')
 }
 
 export default Button;
