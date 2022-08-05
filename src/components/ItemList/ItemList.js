@@ -1,10 +1,11 @@
+import './ItemList.css';
 import Item from "../Item/Item";
 
-const ItemList = ({products}) => {
+const ItemList = ({products, setPage}) => {
     return (
-        <ul>
-            {products.map(prod => <Item key={prod.id} product={prod} />)}
-        </ul> 
+        <div className='ItemList'>
+            {products.map(prod => <Item key={prod.id} {...prod} setPage={setPage} />)}
+        </div> 
     )
 }
 export default ItemList;
