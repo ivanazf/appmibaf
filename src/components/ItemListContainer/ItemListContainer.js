@@ -10,14 +10,26 @@ const ItemListContainer = ({greeting}) => {
     //console.log(products)
 
     const { categoryId } = useParams()
-        
+   
+    //useEffect(() => {
+    //    const onResize = () => {
+    //        console.log('camnio tamañp de ventana')
+    //    }
+    //    window.addEventListener('resize', onResize)
+    //}, [])
+    
+    //return () => {
+    //    window.removeEventListener('resize', onResize)
+    //}
+
     useEffect(() => {
         const asynFunction = categoryId ? getProductsByCategory : getProducts
 
         asynFunction(categoryId).then(products => {
             setProducts(products)
+        }).catch(error =>{
+            console.log(error)
         })
-
 
     //    if(!categoryId) {
     //      getProducts().then(products => {

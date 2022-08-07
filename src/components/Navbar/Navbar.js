@@ -1,17 +1,16 @@
 import './Navbar.css';
-import Button from '../Button/Button';
+//import Button from '../Button/Button';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     //PARTE LOGICA 
     
-    //const text = 'hice clic'
-
     return ( //PARTE VISUAL
         <nav className="Navbar">
-           <div>
+           <Link to='/'>
                <h1> Somos MIBAF </h1>
-           </div>
+           </Link>
            <div className="Categories">
                <Link to='/category/Ropa Interior Femenina' className="Option">Ropa Interior Femenina</Link>
                <Link to='/category/Ropa Interior Masculina' className="Option">Ropa Interior Masculina</Link>

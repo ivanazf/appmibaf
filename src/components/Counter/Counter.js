@@ -30,7 +30,7 @@ const Counter = ({ stock, onAdd }) => {
             setCount(count - 1)
         }
     }
-        //console.log('render')
+        
     return (
         <div>
             {/*<h1>{title}</h1>*/}

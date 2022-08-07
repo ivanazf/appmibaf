@@ -1,4 +1,7 @@
 .Navbar {
-    display: flex;
+    
+    display: inline-block;
     justify-content: center;
+    text-align: justify;
 }
+
