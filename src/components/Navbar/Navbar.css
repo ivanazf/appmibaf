@@ -1,7 +1,12 @@
 .Navbar {
-    
-    display: inline-block;
     justify-content: center;
     text-align: justify;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:#C5C6D9;
+    text-decoration: none;
+
 }
 
+    

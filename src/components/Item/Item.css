@@ -23,13 +23,13 @@
 }
 
 .Info {
-    font-size: 12px;
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
 }
 
 .ButtonDetail {
-    border: none;
+    border-color: white;
     outline: 0;
     width: 100%;
     font-size: 18px;
@@ -41,8 +41,8 @@
 }
 
 .ItemImg {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     object-position: center;
 }
@@ -56,22 +56,17 @@
 .Option {
     flex-wrap: nowrap;
     margin: 50px;
-   
     width: auto;
     padding: 12px;
     font-size: 18px;
-    background: #33B070;
+    background: #C5D489;
     border-radius: 8px;
     text-decoration: none;
     display: inline;
-    order: 1;
-    
-    
+    order: 1;    
     justify-content: space-between;
-    align-items: center;
-    
-    color: black;
-   
+    align-items: center;    
+    color: black;   
     cursor: pointer;
     outline: inherit;
   }
